@@ -4,4 +4,5 @@ Download and Extract -> Open solution file -> Set mode to Relase and platform to
 
 NOTE: It will work only for relase and x64 mode
 
-[here](Video Result/Shape Simulation Latest.mp4)
+[Watch the video](Video%20Result/Shape%20Simulation%20Latest.mp4)
+
