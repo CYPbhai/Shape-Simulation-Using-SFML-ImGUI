@@ -1,0 +1,13 @@
+﻿  main.cpp
+D:\Liabraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,47): warning C4275: non dll-interface class 'std::runtime_error' used as base for dll-interface class 'sf::Exception'
+  (compiling source file 'src/main.cpp')
+      D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207\include\stdexcept(100,30):
+      see declaration of 'std::runtime_error'
+      D:\Liabraries\SFML-3.0.0\include\SFML\System\Exception.hpp(41,23):
+      see declaration of 'sf::Exception'
+  
+  Generating code
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 2736 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Shape Simulation.vcxproj -> D:\Chirag\Projects\C++\COMP 4300\Shape Simulation\x64\Release\Shape Simulation.exe
