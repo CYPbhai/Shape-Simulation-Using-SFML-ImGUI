@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui-SFML.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|solutionrelative:imgui\\imgui-SFML.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -30,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\.gitignore",
+              "RelativeDocumentMoniker": ".gitignore",
+              "ToolTip": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\.gitignore",
+              "RelativeToolTip": ".gitignore",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-09-20T08:17:19.4Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "imgui.cpp",
               "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui.cpp",
               "RelativeDocumentMoniker": "imgui\\imgui.cpp",
@@ -46,20 +63,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "imgui-SFML.cpp",
               "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui-SFML.cpp",
               "RelativeDocumentMoniker": "imgui\\imgui-SFML.cpp",
               "ToolTip": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui-SFML.cpp",
               "RelativeToolTip": "imgui\\imgui-SFML.cpp",
-              "ViewState": "AgIAALIDAAAAAAAAAAAcwLsDAAAGAAAAAAAAAA==",
+              "ViewState": "AgIAALUDAAAAAAAAAAAcwLsDAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-09-20T08:07:29.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "imconfig-SFML.h",
               "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imconfig-SFML.h",
               "RelativeDocumentMoniker": "imgui\\imconfig-SFML.h",
@@ -72,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "imconfig.h",
               "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imconfig.h",
               "RelativeDocumentMoniker": "imgui\\imconfig.h",
@@ -84,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
