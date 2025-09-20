@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{8b6475cc-1fcc-46bf-b026-bf2868337188}</ProjectGuid>
+    <RootNamespace>ShapeSimulation</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>$(SolutionDir)\Liabraries\SFML-3.0.0\lib;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LibraryPath>$(SolutionDir)\Liabraries\SFML-3.0.0\lib;</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LibraryPath>$(SolutionDir)\Liabraries\SFML-3.0.0\lib;$(SolutionDir);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LibraryPath>$(SolutionDir)\Liabraries\SFML-3.0.0\lib;$(SolutionDir);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\imgui;$(SolutionDir)\Liabraries\SFML-3.0.0\include;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;opengl32.lib;</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SFML_DIR)\lib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\imgui;D:\Liabraries\SFML-3.0.0\include;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SFML_DIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;opengl32.lib;</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\imgui;$(SolutionDir)\Liabraries\SFML-3.0.0\include;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SFML_DIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;opengl32.lib;</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)\imgui;D:\Liabraries\SFML-3.0.0\include;</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SFML_DIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-window.lib;sfml-system.lib;opengl32.lib;</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="imgui\imgui-SFML.cpp" />
+    <ClCompile Include="imgui\imgui.cpp" />
+    <ClCompile Include="imgui\imgui_demo.cpp" />
+    <ClCompile Include="imgui\imgui_draw.cpp" />
+    <ClCompile Include="imgui\imgui_tables.cpp" />
+    <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="imgui\imconfig-SFML.h" />
+    <ClInclude Include="imgui\imconfig.h" />
+    <ClInclude Include="imgui\imgui-SFML.h" />
+    <ClInclude Include="imgui\imgui-SFML_export.h" />
+    <ClInclude Include="imgui\imgui.h" />
+    <ClInclude Include="imgui\imgui_internal.h" />
+    <ClInclude Include="imgui\imstb_rectpack.h" />
+    <ClInclude Include="imgui\imstb_textedit.h" />
+    <ClInclude Include="imgui\imstb_truetype.h" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\AudioResource.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\Export.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\InputSoundFile.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\Listener.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\Music.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\OutputSoundFile.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\PlaybackDevice.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\Sound.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundBuffer.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundChannel.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundFileFactory.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundFileReader.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundFileWriter.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundRecorder.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundSource.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundStream.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Config.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\GpuPreference.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\BlendMode.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\CircleShape.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Color.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\ConvexShape.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\CoordinateType.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Drawable.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Export.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Font.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Glsl.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Glyph.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Image.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\PrimitiveType.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Rect.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\RectangleShape.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\RenderStates.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\RenderTarget.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\RenderTexture.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\RenderWindow.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Shader.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Shape.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Sprite.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\StencilMode.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Text.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Texture.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Transform.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Transformable.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Vertex.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\VertexArray.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\VertexBuffer.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\View.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Main.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\Export.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\Ftp.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\Http.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\IpAddress.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\Packet.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\Socket.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\SocketHandle.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\SocketSelector.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\TcpListener.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\TcpSocket.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Network\UdpSocket.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\OpenGL.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Angle.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Clock.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Err.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Exception.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Export.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\FileInputStream.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\InputStream.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\NativeActivity.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Sleep.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\String.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\SuspendAwareClock.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Time.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Utf.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Vector2.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\System\Vector3.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Clipboard.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Context.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\ContextSettings.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Cursor.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Event.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Export.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\GlResource.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Joystick.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Keyboard.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Mouse.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Sensor.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Touch.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\VideoMode.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Vulkan.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\Window.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\WindowBase.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\WindowEnums.hpp" />
+    <ClInclude Include="Liabraries\SFML-3.0.0\include\SFML\Window\WindowHandle.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="fonts\MouldyCheeseRegular-WyMWG.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="config\config.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgui.ini" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\Audio\SoundFileFactory.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Color.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Glsl.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Rect.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\Graphics\Transform.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\System\Angle.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\System\String.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\System\Time.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\System\Utf.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\System\Vector2.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\System\Vector3.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\Window\Event.inl" />
+    <None Include="Liabraries\SFML-3.0.0\include\SFML\Window\WindowBase.inl" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\FLAC\flac-config-version.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\FLAC\flac-config.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\FLAC\targets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\FLAC\targets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\FLAC\targets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\freetype\freetype-config-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\freetype\freetype-config-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\freetype\freetype-config-version.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\freetype\freetype-config.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Ogg\OggConfig.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Ogg\OggConfigVersion.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Ogg\OggTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Ogg\OggTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Ogg\OggTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\FindDRM.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\FindEGL.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\FindFLAC.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\FindFreetype.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\FindGBM.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\FindGLES.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\FindUDev.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\FindVorbis.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLAudioDependencies.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLAudioSharedTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLAudioSharedTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLAudioSharedTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLAudioStaticTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLAudioStaticTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLAudioStaticTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLConfig.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLConfigVersion.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLGraphicsDependencies.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLGraphicsSharedTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLGraphicsSharedTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLGraphicsSharedTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLGraphicsStaticTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLGraphicsStaticTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLGraphicsStaticTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLMainSharedTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLMainSharedTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLMainSharedTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLMainStaticTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLMainStaticTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLMainStaticTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLNetworkSharedTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLNetworkSharedTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLNetworkSharedTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLNetworkStaticTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLNetworkStaticTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLNetworkStaticTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLSystemDependencies.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLSystemSharedTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLSystemSharedTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLSystemSharedTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLSystemStaticTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLSystemStaticTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLSystemStaticTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLWindowDependencies.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLWindowSharedTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLWindowSharedTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLWindowSharedTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLWindowStaticTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLWindowStaticTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\SFML\SFMLWindowStaticTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Vorbis\VorbisConfig.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Vorbis\VorbisConfigVersion.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Vorbis\VorbisTargets-debug.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Vorbis\VorbisTargets-release.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\cmake\Vorbis\VorbisTargets.cmake" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\FLACd.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\freetyped.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\oggd.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-audio-s-d.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-audio-s.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-audio.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-graphics-s-d.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-graphics-s.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-graphics.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-main-s-d.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-main.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-network-s-d.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-network-s.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-network.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-system-s-d.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-system-s.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-system.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-window-s-d.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-window-s.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\sfml-window.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\vorbisd.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\vorbisencd.pdb" />
+    <None Include="Liabraries\SFML-3.0.0\lib\Debug\vorbisfiled.pdb" />
+    <None Include="x64\Debug\sfml-audio-d-3.dll" />
+    <None Include="x64\Debug\sfml-graphics-d-3.dll" />
+    <None Include="x64\Debug\sfml-network-d-3.dll" />
+    <None Include="x64\Debug\sfml-system-d-3.dll" />
+    <None Include="x64\Debug\sfml-window-d-3.dll" />
+    <None Include="x64\Release\sfml-audio-3.dll" />
+    <None Include="x64\Release\sfml-graphics-3.dll" />
+    <None Include="x64\Release\sfml-network-3.dll" />
+    <None Include="x64\Release\sfml-system-3.dll" />
+    <None Include="x64\Release\sfml-window-3.dll" />
+    <None Include="x64\Release\Shape Simulation.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="Liabraries\SFML-3.0.0\lib\FLAC.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\FLACd.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\freetype.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\freetyped.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\ogg.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\oggd.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-audio-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-audio-s-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-audio-s.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-audio.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-graphics-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-graphics-s-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-graphics-s.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-graphics.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-main-s-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-main-s.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-network-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-network-s-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-network-s.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-network.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-system-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-system-s-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-system-s.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-system.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-window-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-window-s-d.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-window-s.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\sfml-window.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\vorbis.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\vorbisd.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\vorbisenc.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\vorbisencd.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\vorbisfile.lib" />
+    <Library Include="Liabraries\SFML-3.0.0\lib\vorbisfiled.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
