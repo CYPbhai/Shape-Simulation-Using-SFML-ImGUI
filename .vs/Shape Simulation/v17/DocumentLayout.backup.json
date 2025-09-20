@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui-SFML.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|solutionrelative:imgui\\imgui-SFML.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imconfig-SFML.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|solutionrelative:imgui\\imconfig-SFML.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|solutionrelative:imgui\\imgui.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imconfig.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8B6475CC-1FCC-46BF-B026-BF2868337188}|Shape Simulation.vcxproj|solutionrelative:imgui\\imconfig.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "imgui.cpp",
+              "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui.cpp",
+              "RelativeDocumentMoniker": "imgui\\imgui.cpp",
+              "ToolTip": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui.cpp",
+              "RelativeToolTip": "imgui\\imgui.cpp",
+              "ViewState": "AgIAAOIBAAAAAAAAAAAcwOsBAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-20T08:07:40.83Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "imgui-SFML.cpp",
+              "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui-SFML.cpp",
+              "RelativeDocumentMoniker": "imgui\\imgui-SFML.cpp",
+              "ToolTip": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imgui-SFML.cpp",
+              "RelativeToolTip": "imgui\\imgui-SFML.cpp",
+              "ViewState": "AgIAALIDAAAAAAAAAAAcwLsDAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-09-20T08:07:29.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "imconfig-SFML.h",
+              "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imconfig-SFML.h",
+              "RelativeDocumentMoniker": "imgui\\imconfig-SFML.h",
+              "ToolTip": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imconfig-SFML.h",
+              "RelativeToolTip": "imgui\\imconfig-SFML.h",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-20T08:04:41.945Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "imconfig.h",
+              "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imconfig.h",
+              "RelativeDocumentMoniker": "imgui\\imconfig.h",
+              "ToolTip": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\imgui\\imconfig.h",
+              "RelativeToolTip": "imgui\\imconfig.h",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAcwBAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-09-20T08:04:40.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\src\\main.cpp",
               "RelativeDocumentMoniker": "src\\main.cpp",
               "ToolTip": "D:\\Chirag\\Projects\\C\u002B\u002B\\COMP 4300\\Shape Simulation\\src\\main.cpp",
               "RelativeToolTip": "src\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAN0AAAAAAAAAAAAswO4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-09-09T19:47:39.737Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-09T19:47:39.737Z"
             }
           ]
         }
