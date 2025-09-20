@@ -1,18 +1,38 @@
-# User-specific files
-*.rsuser
+# Visual Studio files
+.vs/
 *.suo
 *.user
-*.userosscache
-*.sln.docstates
-*.env
-
-# Visual C++ cache files
-ipch/
-*.aps
 *.ncb
-*.opendb
-*.opensdf
 *.sdf
-*.cachefile
+*.opensdf
+*.pdb
+*.ipch
+
+# Build artifacts
+Win32/
+*.obj
+*.ilk
+*.lib
+*.exp
+*.exe
+*.aps
+*.res
+*.tlog
+*.lastbuildstate
 *.VC.db
 *.VC.VC.opendb
+
+# Temporary files
+*.~
+*.bak
+*.log
+*.tmp
+
+# NuGet packages
+packages/
+
+# CMake files (if using CMake)
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+build/
