@@ -22,8 +22,8 @@ struct Shape
     sf::CircleShape m_circleShape;
     std::string m_shapeType;
     std::string m_name;
-    float m_posX = 0.0f, m_posY = 0.0f;
-    float m_velocityX = 0.0f, m_velocityY = 0.0f;
+    float m_pos[2] = {0.0f, 0.0f};
+    float m_velocity[2] = { 0.0f, 0.0f };
     float m_scale = 1.0f;
     float m_color[3] = { 0.0f, 0.0f, 0.0f };
     float m_width = 0.0f, m_height = 0.0f;
@@ -38,21 +38,21 @@ void SimulateShapes(std::vector<Shape> & shapes, std::vector<sf::Text> & texts)
     {
         Shape& shape = shapes[i];
 		sf::Text& text = texts[i];
-        shape.m_posX += shape.m_velocityX;
-        shape.m_posY += shape.m_velocityY;
+        shape.m_pos[0] += shape.m_velocity[0];
+        shape.m_pos[1] += shape.m_velocity[1];
         sf::FloatRect localBounds;
         if (shape.m_shapeType == "Rectangle")
         {
             sf::FloatRect localBounds = shape.m_rectangleShape.getLocalBounds();
-            if (shape.m_posX + localBounds.position.x < 0 || shape.m_posX + localBounds.size.x * shape.m_scale> wWidth)
+            if (shape.m_pos[0] + localBounds.position.x < 0 || shape.m_pos[0] + localBounds.size.x * shape.m_scale> wWidth)
             {
-                shape.m_velocityX *= -1.0f;
+                shape.m_velocity[0] *= -1.0f;
             }
-            if (shape.m_posY + localBounds.position.y < 0 || shape.m_posY + localBounds.size.y * shape.m_scale> wHeight)
+            if (shape.m_pos[1] + localBounds.position.y < 0 || shape.m_pos[1] + localBounds.size.y * shape.m_scale> wHeight)
             {
-                shape.m_velocityY *= -1.0f;
+                shape.m_velocity[1] *= -1.0f;
             }
-            shape.m_rectangleShape.setPosition({ shape.m_posX, shape.m_posY });
+            shape.m_rectangleShape.setPosition({ shape.m_pos[0], shape.m_pos[1]});
 			shape.m_rectangleShape.setScale({ shape.m_scale, shape.m_scale });
             sf::FloatRect textRect = text.getLocalBounds();
             text.setOrigin({ textRect.position.x + textRect.size.x / 2.0f, textRect.position.y + textRect.size.y / 2.0f });
@@ -61,15 +61,15 @@ void SimulateShapes(std::vector<Shape> & shapes, std::vector<sf::Text> & texts)
         else if (shape.m_shapeType == "Circle")
         {
             sf::FloatRect localBounds = shape.m_circleShape.getLocalBounds();
-            if (shape.m_posX + localBounds.position.x < 0 || shape.m_posX + localBounds.size.x * shape.m_scale > wWidth)
+            if (shape.m_pos[0] + localBounds.position.x < 0 || shape.m_pos[0] + localBounds.size.x * shape.m_scale > wWidth)
             {
-                shape.m_velocityX *= -1.0f;
+                shape.m_velocity[0] *= -1.0f;
             }
-            if (shape.m_posY + localBounds.position.y < 0 || shape.m_posY + localBounds.size.y * shape.m_scale> wHeight)
+            if (shape.m_pos[1] + localBounds.position.y < 0 || shape.m_pos[1] + localBounds.size.y * shape.m_scale> wHeight)
             {
-                shape.m_velocityY *= -1.0f;
+                shape.m_velocity[1] *= -1.0f;
             }
-            shape.m_circleShape.setPosition({ shape.m_posX, shape.m_posY });
+            shape.m_circleShape.setPosition({ shape.m_pos[0], shape.m_pos[1]});
             shape.m_circleShape.setScale({ shape.m_scale, shape.m_scale });
             sf::FloatRect textRect = text.getLocalBounds();
             text.setOrigin({ textRect.position.x + textRect.size.x / 2.0f, textRect.position.y + textRect.size.y / 2.0f });
@@ -137,7 +137,7 @@ int main(int argc, char* argv[])
         else if (start == "Rectangle")
         {
             Shape s;
-            fin >> s.m_name >> s.m_posX >> s.m_posY >> s.m_velocityX >> s.m_velocityY >> s.m_color[0]
+            fin >> s.m_name >> s.m_pos[0] >> s.m_pos[1] >> s.m_velocity[0] >> s.m_velocity[1] >> s.m_color[0]
                 >> s.m_color[1] >> s.m_color[2] >> s.m_width >> s.m_height;
             s.m_color[0] /= 255.0f;
             s.m_color[1] /= 255.0f;
@@ -145,14 +145,14 @@ int main(int argc, char* argv[])
             s.m_name.resize(32);
             s.m_shapeType = "Rectangle";
             s.m_rectangleShape = sf::RectangleShape({ s.m_width , s.m_height });
-            s.m_rectangleShape.setPosition({ s.m_posX, s.m_posY });
+            s.m_rectangleShape.setPosition({ s.m_pos[0], s.m_pos[1]});
             s.m_rectangleShape.setFillColor({ uint8_t(s.m_color[0] * 255), uint8_t(s.m_color[1] * 255), uint8_t(s.m_color[2] * 255) });
             shapes.push_back(s);
         }
         else if (start == "Circle")
         {
             Shape s;
-            fin >> s.m_name >> s.m_posX >> s.m_posY >> s.m_velocityX >> s.m_velocityY >> s.m_color[0]
+            fin >> s.m_name >> s.m_pos[0] >> s.m_pos[1] >> s.m_velocity[0] >> s.m_velocity[1] >> s.m_color[0]
                 >> s.m_color[1] >> s.m_color[2] >> s.m_radius;
             s.m_color[0] /= 255.0f;
             s.m_color[1] /= 255.0f;
@@ -160,7 +160,7 @@ int main(int argc, char* argv[])
             s.m_name.resize(32);
             s.m_shapeType = "Circle";
             s.m_circleShape = sf::CircleShape(s.m_radius, 32);
-            s.m_circleShape.setPosition({ s.m_posX, s.m_posY });
+            s.m_circleShape.setPosition({ s.m_pos[0], s.m_pos[1]});
             s.m_circleShape.setFillColor({ uint8_t(s.m_color[0] * 255), uint8_t(s.m_color[1] * 255), uint8_t(s.m_color[2] * 255) });
             shapes.push_back(s);
         }
@@ -216,12 +216,8 @@ int main(int argc, char* argv[])
         ImGui::SameLine();
         ImGui::Checkbox("Draw Text", &shape.m_text);
 		ImGui::SliderFloat("Scale", &shape.m_scale, 0.0f, 4.0f);
-        float availableWidth = ImGui::GetContentRegionAvail().x;
-        ImGui::SetNextItemWidth(availableWidth * 0.33f);
-		ImGui::SliderFloat("", &shape.m_velocityX, -8.0f, 8.0f);
+		ImGui::SliderFloat2("Velocity", shape.m_velocity, -8.0f, 8.0f);
 		ImGui::SameLine();
-        ImGui::SetNextItemWidth(availableWidth * 0.33f);
-		ImGui::SliderFloat("Velocity", &shape.m_velocityY, -8.0f, 8.0f);
 		ImGui::ColorEdit3("Color", shape.m_color);
         ImGui::InputText("Text", shape.m_name.data(), 32);
         items.clear();
